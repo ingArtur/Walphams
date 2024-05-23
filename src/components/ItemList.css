@@ -1,0 +1,16 @@
+.item-list {
+    margin: 20px;
+  }
+  
+  .item-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .item-list li {
+    background: #f9f9f9;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
