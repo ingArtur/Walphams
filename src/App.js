@@ -27,7 +27,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
-              {/* <Route path="/" element={<PrivateRoute><Navigate to="/dashboard" replace={true} />} /> */}
+              <Route path="/" element={<PrivateRoute><Navigate to="/dashboard" /></PrivateRoute>} />
             </Routes>
           </main>
         </div>
@@ -54,6 +54,8 @@ const AuthLinks = () => {
 }
 
 export default App;
+
+
 
 
 
