@@ -1,44 +1,59 @@
-import React, { useState } from 'react'
-import { auth } from '../firebaseConfig'
-import { signInWithEmailAndPassword } from 'firebase/auth'
+import React, { useState } from 'react';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../firebaseConfig';
+import { useNavigate } from 'react-router-dom';
+import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../styles/Form.css';
 
 const Login = () => {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [error, setError] = useState('')
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const navigate = useNavigate(); // Obtiene el historial de navegación
 
   const handleLogin = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     try {
-      await signInWithEmailAndPassword(auth, email, password)
-      alert('Inicio de sesión exitoso')
+      await signInWithEmailAndPassword(auth, email, password);
+      alert('Inicio de sesión exitoso');
+      // Redirige al usuario al Dashboard después de iniciar sesión
+      navigate('/dashboard', {replace:true});
     } catch (error) {
-      setError(error.message)
+      setError(error.message);
     }
-  }
+  };
 
   return (
     <div>
       <h2>Iniciar Sesión</h2>
       {error && <p>{error}</p>}
-      <form onSubmit={handleLogin}>
-        <input
-          type="email"
-          placeholder="Correo electrónico"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Contraseña"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button type="submit">Iniciar Sesión</button>
-      </form>
-    </div>
-  )
-}
+      <form onSubmit={handleLogin} className="form">
+  <div className="input-group">
+    <input
+      type="email"
+      placeholder="Correo electrónico"
+      value={email}
+      onChange={(e) => setEmail(e.target.value)}
+      className="input-field"
+    />
+    <FontAwesomeIcon icon={faEnvelope} className="icon" />
+  </div>
+  <div className="input-group">
+    <input
+      type="password"
+      placeholder="Contraseña"
+      value={password}
+      onChange={(e) => setPassword(e.target.value)}
+      className="input-field"
+    />
+    <FontAwesomeIcon icon={faLock} className="icon" />
+  </div>
+  <button type="submit" className="submit-button">Iniciar Sesión</button>
+</form>
 
-export default Login
+    </div>
+  );
+};
+
+export default Login;

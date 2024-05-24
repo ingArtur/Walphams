@@ -1,60 +1,100 @@
 .dashboard {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .dashboard h1 {
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  nav ul li {
-    margin: 10px 0;
-  }
-  
-  nav ul li a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    padding: 10px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-  }
-  
-  nav ul li a:hover {
-    background-color: #32E0E6;
-    color: #fff;
-  }
-  
-  nav ul li a svg {
-    margin-right: 8px;
-  }
-  
-  .logout-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .logout-button:hover {
-    background-color: #c0392b;
-  }
-  
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.dashboard h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  position: relative;
+  margin: 10px 0;
+}
+
+nav ul li .menu-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  color: #333;
+}
+
+nav ul li .menu-item:hover {
+  background-color: #32E0E6;
+  color: #fff;
+}
+
+nav ul li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #32E0E6;
+  color: #fff;
+}
+
+nav ul li a svg, .menu-item svg {
+  margin-right: 8px;
+}
+
+nav ul .submenu {
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  display: none;
+}
+
+nav ul .submenu li {
+  margin: 5px 0;
+}
+
+nav ul .submenu li a {
+  white-space: nowrap;
+}
+
+nav ul li:hover .submenu {
+  display: block;
+}
+
+.logout-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+  background-color: #c0392b;
+}

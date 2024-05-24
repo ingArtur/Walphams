@@ -5,6 +5,12 @@ import Register from './components/Register';
 import Login from './components/Login';
 import PrivateRoute from './components/PrivateRoute';
 import Dashboard from './components/Dashboard';
+import ClientList from './components/ClientList';
+import AddClient from './components/AddClient';
+import ImportClients from './components/ImportClients';
+import ProductList from './components/ProductList';
+import AddProduct from './components/AddProduct';
+import DeleteProduct from './components/DeleteProduct';
 import './styles/App.css';
 
 function App() {
@@ -27,6 +33,12 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
+              <Route path="/dashboard/clients/list" element={<PrivateRoute><ClientList /></PrivateRoute>} />
+              <Route path="/dashboard/clients/add" element={<PrivateRoute><AddClient /></PrivateRoute>} />
+              <Route path="/dashboard/clients/import" element={<PrivateRoute><ImportClients /></PrivateRoute>} />
+              <Route path="/dashboard/products/list" element={<PrivateRoute><ProductList /></PrivateRoute>} />
+              <Route path="/dashboard/products/add" element={<PrivateRoute><AddProduct /></PrivateRoute>} />
+              <Route path="/dashboard/products/delete" element={<PrivateRoute><DeleteProduct /></PrivateRoute>} />
               <Route path="/" element={<PrivateRoute><Navigate to="/dashboard" /></PrivateRoute>} />
             </Routes>
           </main>
@@ -54,6 +66,7 @@ const AuthLinks = () => {
 }
 
 export default App;
+
 
 
 
