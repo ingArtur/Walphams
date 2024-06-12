@@ -24,37 +24,14 @@ const Sidebar = ({ handleLogout }) => {
       <nav>
         <ul>
           <li>
-            <div className="menu-item" onClick={toggleClientsSubmenu}>
-              <FaUser /> Clientes {isClientsSubmenuOpen ? <FaAngleUp /> : <FaAngleDown />}
-            </div>
-            {isClientsSubmenuOpen && (
-              <ul className="submenu">
-                <li>
-                  <Link to="/dashboard/clients/list">Lista de Clientes</Link>
-                </li>
-                <li>
-                  <Link to="/dashboard/clients/add">Agregar Cliente</Link>
-                </li>
-                <li>
-                  <Link to="/dashboard/clients/import">Importar Clientes</Link>
-                </li>
-              </ul>
-            )}
-          </li>
+          <Link to="/dashboard/clients">
+          <FaUser /> Clientes
+         </Link>
+          </li>   
           <li>
-            <div className="menu-item" onClick={toggleProductsSubmenu}>
-              <FaBox /> Productos {isProductsSubmenuOpen ? <FaAngleUp /> : <FaAngleDown />}
-            </div>
-            {isProductsSubmenuOpen && (
-              <ul className="submenu">
-                <li>
-                  <Link to="/dashboard/products/list">Lista de Productos</Link>
-                </li>
-                <li>
-                  <Link to="/dashboard/products/add">Agregar Producto</Link>
-                </li>
-              </ul>
-            )}
+          <Link to="/dashboard/products">
+          <FaBox /> Productos
+          </Link>
           </li>
           <li>
             <Link to="/dashboard/locations">

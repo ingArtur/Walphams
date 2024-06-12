@@ -2,7 +2,6 @@ import React from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import { getAuth, signOut } from 'firebase/auth';
 import Sidebar from '../components/Sidebar';
-import './Dashboard.css'; // Asegúrate de crear este archivo de estilo
 
 const Dashboard = () => {
   const navigate = useNavigate();
