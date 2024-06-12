@@ -1,0 +1,60 @@
+.sidenav {
+  height: 100%;
+  width: 250px; /* Ancho inicial */
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+  transition: 0.5s;
+}
+
+.sidenav h1 {
+  color: white;
+  text-align: center;
+}
+
+.sidenav nav {
+  margin-top: 20px;
+}
+
+.sidenav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidenav li {
+  padding: 10px 15px;
+  color: white;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.submenu {
+  display: none;
+}
+
+.submenu li {
+  padding-left: 20px;
+}
+
+.logout-button {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+/* Media query para hacer que el sidebar sea responsive */
+@media screen and (max-width: 768px) {
+  .sidenav {
+    width: 100%; /* Ancho completo en pantallas pequeñas */
+    padding-top: 60px; /* Ajuste para el espacio del encabezado */
+  }
+}

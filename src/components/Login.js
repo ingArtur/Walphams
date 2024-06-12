@@ -4,7 +4,7 @@ import { auth } from '../firebaseConfig';
 import { useNavigate } from 'react-router-dom';
 import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import '../styles/Form.css';
+import './Login.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -16,7 +16,7 @@ const Login = () => {
     e.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      alert('Inicio de sesión exitoso');
+      
       // Redirige al usuario al Dashboard después de iniciar sesión
       navigate('/dashboard', {replace:true});
     } catch (error) {
