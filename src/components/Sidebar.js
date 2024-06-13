@@ -1,19 +1,10 @@
-import React, { useState } from 'react';
+
 import { Link } from 'react-router-dom';
 import { FaUser, FaBox, FaMapMarkerAlt, FaTags, FaShoppingCart, FaTruck, FaSignOutAlt, FaAngleDown, FaAngleUp } from 'react-icons/fa';
 import './Sidebar.css';
 
 const Sidebar = ({ handleLogout }) => {
-  const [isClientsSubmenuOpen, setIsClientsSubmenuOpen] = useState(false);
-  const [isProductsSubmenuOpen, setIsProductsSubmenuOpen] = useState(false);
 
-  const toggleClientsSubmenu = () => {
-    setIsClientsSubmenuOpen(!isClientsSubmenuOpen);
-  };
-
-  const toggleProductsSubmenu = () => {
-    setIsProductsSubmenuOpen(!isProductsSubmenuOpen);
-  };
 
   return (
     <div className="sidenav">

@@ -7,7 +7,7 @@ import Dashboard from '../components/Dashboard';
 import Clientes from '../pages/Clientes';
 import Categorias from '../pages/Categorias';
 import Pedidos from '../pages/Pedidos';
-import { Productos } from '../pages/Productos';
+import Productos  from '../pages/Productos';
 import Proveedores from '../pages/Proveedores';
 import Ubicaciones from '../pages/Ubicaciones';
 import Sidebar from '../components/Sidebar';
