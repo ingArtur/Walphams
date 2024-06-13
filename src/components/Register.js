@@ -18,7 +18,7 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault()
     try {
-      // Crear usuario en Firebase Authentication
+      // Crea usuario en Firebase Authentication
       const { user } = await createUserWithEmailAndPassword(auth, email, password)
       
       // Guardar datos adicionales en Firebase Firestore

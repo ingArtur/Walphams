@@ -32,7 +32,6 @@ const AppRoutes = () => {
           <Route path="/dashboard/products" element={<PrivateRoute><Productos /></PrivateRoute>} />
           <Route path="/dashboard/providers" element={<PrivateRoute><Proveedores /></PrivateRoute>} />
           <Route path="/dashboard/locations" element={<PrivateRoute><Ubicaciones /></PrivateRoute>} />
-          {/* Ruta por defecto o 404 */}
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </div>
