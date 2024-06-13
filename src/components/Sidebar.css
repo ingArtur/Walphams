@@ -1,14 +1,16 @@
 
 .sidenav {
   width: 200px;
-  height: 100vh;
+  height: calc(100vh - 60px); /* 100% del viewport height menos la altura del navbar */
   position: fixed;
   left: 0;
-  top: 0;
+  top: 72px; /* Ajusta aquí la altura de tu navbar */
   background-color: #111;
   padding-top: 20px;
   color: white;
+  margin-top: auto;
 }
+
 
 .sidenav h1 {
   color: white;
@@ -38,17 +40,6 @@
 
 .sidenav nav ul li .submenu li {
   text-align: left;
-}
-
-.logout-button {
-  width: 100%;
-  padding: 10px;
-  background-color: #dc3545;
-  color: white;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  bottom: 0;
 }
 
 nav ul li .menu-item {
@@ -91,7 +82,7 @@ nav ul li a svg, .menu-item svg {
   margin-top: 20px;
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #e74c3c;
+  background-color: #dc3545;;
   color: white;
   border: none;
   border-radius: 4px;
@@ -101,8 +92,9 @@ nav ul li a svg, .menu-item svg {
 
 .logout-button:hover {
   background-color: #c0392b;
+  color: white; /* Cambia el color del texto al hacer hover */
+  transition: background-color 0.3s ease; /* Añade una transición suave */
 }
-
 
 
 /* Media query para hacer que el sidebar sea responsive */

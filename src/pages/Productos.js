@@ -34,18 +34,14 @@ const Productos = () => {
 
   const handleAdd = async () => {
     try {
-      await addDoc(collection(db, "productos"), nuevoProducto);
+      const docRef = await addDoc(collection(db, "productos"), nuevoProducto);
+      setProductos([...productos, { ...nuevoProducto, id: docRef.id }]);
       setNuevoProducto({
         nombre: '',
         stock: '',
         precio: '',
         createdAt: new Date().toISOString()
       });
-
-      // Actualizar la lista de productos después de agregar uno nuevo
-      const querySnapshot = await getDocs(collection(db, "productos"));
-      const productosList = querySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }));
-      setProductos(productosList);
     } catch (error) {
       console.error("Error adding product:", error);
     }

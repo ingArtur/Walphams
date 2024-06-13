@@ -4,7 +4,7 @@ import { db } from '../firebaseConfig';
 import Sidebar from '../components/Sidebar'; // Ajusta la ruta según tu estructura de directorios
 import './Categorias.css';
 
-const CategoriasProductos = () => {
+const Categorias = () => {
   const [categorias, setCategorias] = useState([]);
   const [nuevaCategoria, setNuevaCategoria] = useState({
     nombre: '',
@@ -41,7 +41,7 @@ const CategoriasProductos = () => {
   const handleAdd = async () => {
     try {
       setLoading(true);
-      await addDoc(collection(db, "categorias"), nuevaCategoria);
+      const docRef = await addDoc(collection(db, "categorias"), nuevaCategoria);
       setNuevaCategoria({
         nombre: '',
         descripcion: '',
@@ -125,4 +125,4 @@ const CategoriasProductos = () => {
   );
 };
 
-export default CategoriasProductos;
+export default Categorias;

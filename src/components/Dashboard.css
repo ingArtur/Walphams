@@ -1,0 +1,59 @@
+/* Dashboard.css */
+.dashboard-container {
+    display: flex;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .responsive-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .tile {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 12px;  /* Rounded corners */
+    padding: 30px;  /* Increased padding for larger tiles */
+    text-align: center;
+    flex: 1 1 200px;  /* Ensure tiles are larger */
+    max-width: 250px;  /* Increased max-width */
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;  /* Add smooth hover effect */
+  }
+  
+  .tile:hover {
+    transform: translateY(-10px);  /* Lift tile slightly on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);  /* Add shadow on hover */
+  }
+  
+  .tile-icon {
+    font-size: 2.5em;  /* Increased font size for icons */
+    color: #32E0E6;  /* Apply color to icons */
+    margin-bottom: 15px;  /* Increased margin-bottom */
+  }
+  
+  .tile-count {
+    display: block;
+    font-size: 2.5em;  /* Increased font size for count */
+    font-weight: bold;
+    color: #333;  /* Darker color for text */
+  }
+  
+  .tile-label {
+    display: block;
+    margin-top: 15px;  /* Increased margin-top */
+    color: #666;  /* Color for label */
+    font-size: 1.1em;  /* Slightly increased font size */
+  }
+  
+  @media (max-width: 768px) {
+    .tile {
+      flex: 1 1 100%;  /* Make tiles full width on smaller screens */
+    }
+  }
+  

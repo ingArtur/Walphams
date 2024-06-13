@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { FaRegCircleUser } from "react-icons/fa6";
 
 const Navbar = () => {
   const { currentUser } = useAuth();
@@ -19,7 +20,10 @@ const Navbar = () => {
             <Link to="/register">Registrarse</Link>
           </>
         ) : (
-          <span>Bienvenido, {currentUser.email}</span>
+          <div className="user-info">
+            <FaRegCircleUser className="user-icon" />
+            <span>{currentUser.name}</span>
+          </div>
         )}
       </nav>
     </header>

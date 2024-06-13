@@ -1,6 +1,4 @@
-/* Estilo mejorado del formulario */
 
-/* Estilo del formulario */
 form {
   background-color: #f9f9f9; /* Cambiado a un tono más suave de blanco */
   padding: 20px;
@@ -10,6 +8,14 @@ form {
   margin: 0 auto;
 }
 
+icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: #999;
+ }
 /* Estilo de los campos de entrada */
 input {
   width: calc(100% - 20px);
@@ -19,6 +25,7 @@ input {
   border-radius: 6px; /* Ligeramente redondeado los bordes */
   transition: border-color 0.3s ease; /* Añadida transición para el color del borde */
 }
+
 
 /* Cambio de estilo para cuando el campo de entrada está enfocado */
 input:focus {

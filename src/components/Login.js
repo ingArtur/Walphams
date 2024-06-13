@@ -6,6 +6,7 @@ import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Login.css';
 
+
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -26,7 +27,10 @@ const Login = () => {
 
   return (
     <div>
-      <h2>Iniciar Sesión</h2>
+      <h2>
+      <span style={{ color: '#32E0E6' }}>Iniciar</span>
+      <span style={{ color: 'black' }}> Sesión</span>
+      </h2>
       {error && <p>{error}</p>}
       <form onSubmit={handleLogin} className="form">
   <div className="input-group">
@@ -37,7 +41,9 @@ const Login = () => {
       onChange={(e) => setEmail(e.target.value)}
       className="input-field"
     />
-    <FontAwesomeIcon icon={faEnvelope} className="icon" />
+ <div style={{ textAlign: 'center' }}>
+  <FontAwesomeIcon icon={faEnvelope} className="icon" />
+</div>
   </div>
   <div className="input-group">
     <input
@@ -47,7 +53,9 @@ const Login = () => {
       onChange={(e) => setPassword(e.target.value)}
       className="input-field"
     />
+    <div style={{ textAlign: 'center'}}>
     <FontAwesomeIcon icon={faLock} className="icon" />
+    </div>
   </div>
   <button type="submit" className="submit-button">Iniciar Sesión</button>
 </form>
