@@ -1,0 +1,86 @@
+.dashboard-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .proveedor-form-container {
+    margin-bottom: 20px;
+  }
+  
+  .proveedor-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .proveedor-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .proveedor-form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .proveedor-form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .proveedor-form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .proveedor-table-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .proveedor-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .proveedor-table th, .proveedor-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .proveedor-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .proveedor-table td {
+    vertical-align: middle;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  

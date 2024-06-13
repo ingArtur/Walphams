@@ -1,0 +1,83 @@
+.ubicaciones-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ubicaciones-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .add-ubicacion {
+    margin-bottom: 20px;
+  }
+  
+  .input-field {
+    width: calc(100% - 10px);
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .textarea-field {
+    width: calc(100% - 10px);
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  .btn-add {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-add:hover {
+    background-color: #45a049;
+  }
+  
+  .ubicaciones-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .ubicaciones-table th, .ubicaciones-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .ubicaciones-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .ubicaciones-table td {
+    vertical-align: middle;
+  }
+  
+  .btn-edit, .btn-delete {
+    padding: 8px 12px;
+    margin-right: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
+  
+  .btn-edit:hover, .btn-delete:hover {
+    color: #4CAF50;
+  }
+  
